@@ -12,13 +12,10 @@ void shell_loop(void)
 
 		command_line = function_getline();
 		arguments = function_arguments(command_line);
-		//status = execute_command(arguments);
+		status = execute_command(arguments);
 
 		free(command_line);
 		free(arguments);
-
-
-
 	}
 
 }

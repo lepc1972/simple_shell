@@ -9,6 +9,7 @@
   #include <string.h>  /*prototypes*/
   void shell_loop(void);
 
-  char **function_arguments(char *command_line);
-  char *function_getline();
+char **function_arguments(char *command_line);
+char *function_getline();
+int execute_arguments(char **arguments)
   #endif
