@@ -9,9 +9,8 @@ char *function_getline()
         line_size = getline(&command_line, &buf_size, stdin);
         if (line_size == -1)
           {
-
-                perror("Error");
-
+		  if (feof(stdin))
+			  exit;
           }
 
           return (command_line);
