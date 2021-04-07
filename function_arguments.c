@@ -22,7 +22,6 @@ char **function_arguments(char *command_line)
         {
                 arguments_token[i] = token;
                 token = strtok(NULL, " ");
-                printf("%i, %s\n", i, arguments_token[i]);
         }
         return (arguments_token);
 }

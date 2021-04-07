@@ -2,20 +2,10 @@
 /**
  *
  */
-int execute_arguments(char **arguments)
+int execute_command(char **arguments)
 {
-	int i;
+	if (strcmp(arguments[0], "exit") == 0)
+		exit(0);
 
-	for (i = 0; arguments[i] != NULL; i++)
-	{
-		switch (arguments)
-		{
-		case "exit":
-			printf("perror");
-			exit;
-
-		default:
-			printf("Haga otra cosa");
-		}
-	}
+	return (0);
 }
