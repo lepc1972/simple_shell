@@ -13,6 +13,8 @@
 void shell_loop(void);
 char **function_arguments(char *command_line);
 char *function_getline();
+int _strlen(char *str);
+int _strcmp(char *s1, char *s2);
 int execute_command(char **arguments);
 
 #endif

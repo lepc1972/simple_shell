@@ -8,7 +8,7 @@ void shell_loop(void)
 
 	while (1)
 	{
-		printf("$ ");
+		write(STDOUT_FILENO, "$ ", 2);
 
 		command_line = function_getline();
 		arguments = function_arguments(command_line);

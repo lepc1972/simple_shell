@@ -9,10 +9,10 @@ int execute_command(char **arguments)
 	pid_t child_process, wchild;
 	extern char **environ;
 
-	if (strcmp(arguments[0], "exit") == 0)
-		exit(0);
+	if (_strcmp(arguments[0], "exit") == 0)
+		exit(EXIT_SUCCESS);
 
-	else if (strcmp(arguments[0], "env") == 0)
+	else if (_strcmp(arguments[0], "env") == 0)
 	{
 		for (i = 0; environ[i] != NULL; i++)
 			printf ("%s\n", environ[i]);
@@ -27,14 +27,14 @@ int execute_command(char **arguments)
 			execve(arguments[0], arguments, environ);
 		}
 
-		wchild = waitpid(child_process, &status, WUNTRACED);
-
-		return (0);
+		wait(&status);
 	}
 
 	else
 	{
-		printf("sh: command not found: %s\n", arguments[0]);
+		write(STDOUT_FILENO, "hsh: 1: ", 8);
+		write(STDOUT_FILENO, arguments[0], _strlen(arguments[0]));
+		write(STDOUT_FILENO, ": not found\n", 12);
 	}
 
 	return (0);
