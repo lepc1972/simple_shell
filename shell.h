@@ -10,6 +10,7 @@
 #include <string.h>
 
 /*prototypes*/
+extern char **environ;
 void shell_loop(char *argv[]);
 char **function_arguments(char *command_line);
 char *function_getline();

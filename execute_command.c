@@ -6,7 +6,6 @@ int execute_command(char **arguments, char *argv[], int count)
 {
 	int i, status, flag;
 	pid_t child_process;
-	extern char **environ;
 	char str_cocat[100] = "/bin/";
 
 	flag = isatty(STDIN_FILENO);
