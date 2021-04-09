@@ -8,10 +8,9 @@ char *function_getline()
 	int i;
 
         line_size = getline(&command_line, &buf_size, stdin);
-        if (line_size == -1)
+        if (line_size == EOF)
           {
-		  if (feof(stdin))
-			  exit(0);
+		   exit(0);
           }
 
 	for (i = 0;  command_line[i] != '\0'; i++)
