@@ -2,12 +2,13 @@
 /**
  *
  */
-int execute_command(char **arguments)
+int execute_command(char **arguments, char *argv[])
 {
-	int i;
-	int status;
+	int i, status, flag;
 	pid_t child_process, wchild;
 	extern char **environ;
+
+	flag = isatty(STDIN_FILENO);
 
 	if (_strcmp(arguments[0], "exit") == 0)
 		exit(EXIT_SUCCESS);
@@ -30,12 +31,11 @@ int execute_command(char **arguments)
 		wait(&status);
 	}
 
+	else if (flag == 1)
+		printf("%s: command not found: %s\n", argv[0], arguments[0]);
+
 	else
-	{
-		write(STDOUT_FILENO, "hsh: 1: ", 8);
-		write(STDOUT_FILENO, arguments[0], _strlen(arguments[0]));
-		write(STDOUT_FILENO, ": not found\n", 12);
-	}
+		printf("%s: 1: %s: not found\n", argv[0], arguments[0]);
 
 	return (0);
 }

@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void shell_loop(void)
+void shell_loop(char *argv[])
 {
 	char *command_line;
 	char **arguments;
@@ -12,7 +12,7 @@ void shell_loop(void)
 
 		command_line = function_getline();
 		arguments = function_arguments(command_line);
-		status = execute_command(arguments);
+		status = execute_command(arguments, argv);
 
 		free(command_line);
 		free(arguments);
