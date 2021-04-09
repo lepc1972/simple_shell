@@ -1,7 +1,5 @@
 #include "shell.h"
-/**
- *
- */
+
 int execute_command(char **arguments, char *argv[], int count)
 {
 	int i, status, flag;
