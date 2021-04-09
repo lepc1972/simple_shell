@@ -16,6 +16,7 @@ char *function_getline();
 
 int _strlen(char *str);
 int _strcmp(char *s1, char *s2);
+char *_strncat(char *dest, char *src, int n);
 int execute_command(char **arguments, char *argv[], int count);
 
 #endif
