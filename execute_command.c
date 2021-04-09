@@ -1,4 +1,13 @@
 #include "shell.h"
+/**
+ * execute_command - Function that execute all commands.
+ *
+ * @arguments: args to be read;
+ * @argv: values;
+ * @count: error counter;
+ *
+ * Return: Always 0.
+ */
 
 int execute_command(char **arguments, char *argv[], int count)
 {
