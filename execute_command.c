@@ -22,7 +22,7 @@ int execute_command(char **arguments, char *argv[], int count)
 	else if (_strcmp(arguments[0], "env") == 0)
 	{
 		for (i = 0; environ[i] != NULL; i++)
-			printf ("%s\n", environ[i]);
+			printf("%s\n", environ[i]);
 	}
 	else if (access(arguments[0], F_OK) != -1)
 	{
