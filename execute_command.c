@@ -2,7 +2,7 @@
 /**
  *
  */
-int execute_command(char **arguments, char *argv[])
+int execute_command(char **arguments, char *argv[], int count)
 {
 	int i, status, flag;
 	pid_t child_process, wchild;
@@ -32,10 +32,10 @@ int execute_command(char **arguments, char *argv[])
 	}
 
 	else if (flag == 1)
-		printf("%s: command not found: %s\n", argv[0], arguments[0]);
+		printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
 
 	else
-		printf("%s: 1: %s: not found\n", argv[0], arguments[0]);
+		printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
 
 	return (0);
 }
