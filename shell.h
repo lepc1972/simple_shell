@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 
 /*prototypes*/
 extern char **environ;
@@ -17,7 +18,12 @@ char *function_getline();
 
 int _strlen(char *str);
 int _strcmp(char *s1, char *s2);
-char *_strcat(char *dest, char *src);
+char *_strncat(char *dest, char *src, int n);
 int execute_command(char **arguments, char *argv[], int count);
+int print_integer(va_list pa);
+int print_character(va_list pa);
+int print_string(va_list pa);
+int _printf(const char *format, ...);
+int _putchar(char c);
 
 #endif

@@ -1,23 +1,28 @@
 #include "shell.h"
-
+/**
+* shell_loop - function that create a loop for shell
+* @argv: arguments
+*
+* Return: void
+*/
 void shell_loop(char *argv[])
 {
-	char *command_line;
-	char **arguments;
-	int count = 0, status;
+char *command_line;
+char **arguments;
+int count = 0, status;
 
-	while (1)
-	{
-		write(STDOUT_FILENO, "$ ", 2);
+while (1)
+{
+write(STDOUT_FILENO, "$ ", 2);
 
-		count++;
+count++;
 
-		command_line = function_getline();
-		arguments = function_arguments(command_line);
-		status = execute_command(arguments, argv, count);
+command_line = function_getline();
+arguments = function_arguments(command_line);
+status = execute_command(arguments, argv, count);
 
-		free(command_line);
-		free(arguments);
-	}
+free(command_line);
+free(arguments);
+}
 
 }

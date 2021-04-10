@@ -16,13 +16,13 @@ int execute_command(char **arguments, char *argv[], int count)
 	char str_cocat[100] = "/bin/";
 
 	flag = isatty(STDIN_FILENO);
-	_strcat(str_cocat, arguments[0]);
+	_strncat(str_cocat, arguments[0], _strlen(arguments[0]));
 	if (_strcmp(arguments[0], "exit") == 0)
 		exit(EXIT_SUCCESS);
 	else if (_strcmp(arguments[0], "env") == 0)
 	{
 		for (i = 0; environ[i] != NULL; i++)
-			printf("%s\n", environ[i]);
+			_printf("%s\n", environ[i]);
 	}
 	else if (access(arguments[0], F_OK) != -1)
 	{
@@ -39,8 +39,8 @@ int execute_command(char **arguments, char *argv[], int count)
 		wait(&status);
 	}
 	else if (flag == 1)
-		printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
+		_printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
 	else
-		printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
+		_printf("%s: %i: %s: not found\n", argv[0], count, arguments[0]);
 	return (0);
 }
