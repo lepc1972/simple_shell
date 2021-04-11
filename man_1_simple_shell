@@ -1,1 +1,114 @@
-soon...
+.TH man page 1 "15 abril 2021" "v. 1.0.0" "shell man page hsh"
+.SH NAME
+.B man page hsh.
+
+This shell is a sh-compatible command language interpreter that execute commands from the standar input or from a file.
+- A super-basic command line interpreter based on UNIX.
+.SH SYNOPSYS
+This interpreter was designed to run all the repository files, withGNU compiler version- "gcc 4.8.4" supported by "Ubuntu 14.04.05 LTS" and all its environment. When compile is done, the executable file clone a shell, exactly like the original shell does to access all services. Like the original system shell, this one have some built-in commands and also integrates other PATH ones.
+The output is like original shell - system shell.
+
+.SH DESCRIPTION
+The shell is a program designed to interpret the user commands, so the commands are transformed in binary orders that our system can understand, if there a valid command this will be executed, otherwise we will get an error message.
+
+.SH USAGE
+All the files are going to be compiled with ubuntu 14.04 LTS machine, helped with this flags: "-pedantic -Werror -Wextra -Wall"...
+"gcc -pedantic -Werror -Wextra -Wall *.c -o hsh"
+
+Example:
+.br
+$ gcc -pedantic -Werror -Wextra -Wall *.c -o hsh
+
+After that we obtain a ./hsh executable, now you can run the program: ./hsh
+
+Example:
+.br
+$ ./hsh
+
+To leave the programm type exit
+
+Example:
+.br
+$ exit
+
+.SH COMMANDS
+If a command was recognized, the shell can do this:
+.br
+You can introduce a command in this way:
+.br
+
+command [arguments] or PATH [arguments]
+.br
+
+The shell will search the command, if get it, the command will be executed, otherwise it will return a error message indicating that is not a valid command.
+
+.SH BUILT-INS
+This section shows the built-ins commands.
+.br
+
+.B - exit:
+Terminate shell process, to use it write: exit
+.br
+
+.B - env:
+Prints the current environment, to use it write: env
+.br
+
+.B - help:
+Show help options, to use it write: help
+.br
+
+.SH FUNCTIONS CREATED
+The following are the functions that were created to replace functions of the standard libraries:
+.br
+
+.B - _strcmp:
+Compare two strings, if there is a match between strings the result is 0.
+.br
+
+.B - _strlen:
+Determine string length.
+.br
+
+.B - _printf:
+Prints errors in the shell.
+.br
+
+.B - -strncat:
+Concatenate two strings.
+.br
+
+.SH SEE ALSO
+List of allowed functions and system calls: `access`, `chdir`, `close`, `closedir`, `execve`, `exit`, `fork`, `free`, `fstat`, `getcwd`, `getline`, `kill`, `lstat`, `malloc`, `open`, `opendir`, `perror`, `read`, `readdir`, `signal`, `stat`, `strtok`, `wait`, `waitpid`, `wait3`, `wait4`, `write`, `_exit`.
+
+
+.SH SHELL BUGS
+No known bugs.
+
+.SH AUTHORS
+Carolina Capote, Luis Pacheco, Juan Tuta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
