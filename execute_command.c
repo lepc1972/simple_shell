@@ -16,6 +16,8 @@ int execute_command(char **arguments, char *argv[], int count)
 	char str_cocat[100] = "/bin/";
 
 	flag = isatty(STDIN_FILENO);
+	if (!arguments[0])
+		return (0);
 	_strncat(str_cocat, arguments[0], _strlen(arguments[0]));
 	if (_strcmp(arguments[0], "exit") == 0)
 		exit(EXIT_SUCCESS);
