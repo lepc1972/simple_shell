@@ -19,7 +19,7 @@ char *function_getline();
 int _strlen(char *str);
 int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
-int execute_command(char **arguments, char *argv[], int count);
+int execute_command(char **arguments, char *argv[], int count, char *line);
 int print_integer(va_list pa);
 int print_character(va_list pa);
 int print_string(va_list pa);

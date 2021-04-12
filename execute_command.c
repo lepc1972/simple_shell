@@ -5,11 +5,11 @@
  * @arguments: args to be read;
  * @argv: values;
  * @count: error counter;
- *
+ * @line: free like a butterfly;
  * Return: Always 0.
  */
 
-int execute_command(char **arguments, char *argv[], int count)
+int execute_command(char **arguments, char *argv[], int count, char *line)
 {
 	int i, status, flag;
 	pid_t child_process;
@@ -20,7 +20,11 @@ int execute_command(char **arguments, char *argv[], int count)
 		return (0);
 	_strcat(str_cocat, arguments[0]);
 	if (_strcmp(arguments[0], "exit") == 0)
+	{
+		free(arguments);
+		free(line);
 		exit(EXIT_SUCCESS);
+	}
 	else if (_strcmp(arguments[0], "env") == 0)
 	{
 		for (i = 0; environ[i] != NULL; i++)

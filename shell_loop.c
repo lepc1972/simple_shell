@@ -19,7 +19,7 @@ count++;
 
 command_line = function_getline();
 arguments = function_arguments(command_line);
-execute_command(arguments, argv, count);
+execute_command(arguments, argv, count, command_line);
 
 free(command_line);
 free(arguments);

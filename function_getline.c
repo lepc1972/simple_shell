@@ -14,7 +14,8 @@ int i;
 line_size = getline(&command_line, &buf_size, stdin);
 if (line_size == EOF)
 {
-exit(0);
+	free(command_line);
+	exit(0);
 }
 
 for (i = 0;  command_line[i] != '\0'; i++)
