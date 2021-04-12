@@ -18,7 +18,7 @@ int execute_command(char **arguments, char *argv[], int count)
 	flag = isatty(STDIN_FILENO);
 	if (!arguments[0])
 		return (0);
-	_strncat(str_cocat, arguments[0], _strlen(arguments[0]));
+	_strcat(str_cocat, arguments[0]);
 	if (_strcmp(arguments[0], "exit") == 0)
 		exit(EXIT_SUCCESS);
 	else if (_strcmp(arguments[0], "env") == 0)
