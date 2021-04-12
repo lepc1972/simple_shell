@@ -14,7 +14,7 @@ int i;
 if (!arguments_token)
 {
 perror("error args");
-exit;
+exit(EXIT_FAILURE);
 }
 token = strtok(command_line, " ");
 for (i = 0; token != NULL; i++)
