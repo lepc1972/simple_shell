@@ -13,6 +13,7 @@ int count = 0;
 
 while (1)
 {
+if (isatty(STDIN_FILENO))
 write(STDOUT_FILENO, "$ ", 2);
 
 count++;
