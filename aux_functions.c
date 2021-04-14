@@ -31,10 +31,9 @@ i++;
 return (i);
 }
 /**
-*_strncat - Function that concatenates 2 strings.
+*_strcat - Function that concatenates 2 strings.
 *@dest: First string to be concatenated.
 *@src: String to be appended.
-*@n: number of characters
 * Return: Pointer to the resulting string dest.
 */
 char *_strcat(char *dest, char *src)

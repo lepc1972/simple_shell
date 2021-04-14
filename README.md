@@ -4,7 +4,7 @@
 ![N|Solid](https://blog.carreralinux.com.ar/wp-content/uploads/2016/12/shell-scripts-en-linux.png)
 
 ## Description
-This repository contains a team project realized for Holberton School. Here you are going to find a simple UNIX command interpreter (a shell), written in C language. With this interpreter, you can read command lines, interpret them, run them, print the environment of the shell, and exit it.
+This repository contains a team project made by Holberton School students. Here you are going to find a simple UNIX command interpreter (a shell), written in C language. With this interpreter, you can read command lines, interpret them, run them, print the environment of the shell, and exit it.
 
 ### Files description
 - **shell.h**
