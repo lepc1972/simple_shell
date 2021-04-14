@@ -23,7 +23,7 @@ int execute_command(char **arguments, char *argv[], int count, char *line)
 	{
 		free(arguments);
 		free(line);
-		exit(EXIT_SUCCESS);
+		exit(127);
 	}
 	else if (_strcmp(arguments[0], "env") == 0)
 	{
