@@ -128,6 +128,7 @@ hsh main.c shell_loop.c shell.h
 
    ## Support and Authors
    Type `man ./man_1_simple_shell` in your terminal to display the manual pages of the simple shell, or you can also contact the authors of the repository via e-mail.
+   :computer:
    | Name | E-mail adress | GitHub username |
    | ------ | ------ | ------ |
    | Carolina Capote | 2621@holbertonschool.com | [Carolinacapote](https://github.com/Carolinacapote) |
